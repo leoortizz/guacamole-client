@@ -1,10 +1,2 @@
 target/
-doc
-extensions
-guacamole
-guacamole-common
-guacamole-docker
-guacamole-ext
-.dockerignore
-.ratignore
-Dockerfile
+*~
