@@ -9,6 +9,7 @@ gulp.task("default", function () {
     .src("./src/main/webapp/modules/*.js")
     .pipe(concat("guacamole-common.js"))
     .pipe(insert.append("\nmodule.exports = Guacamole;"))
+    .pipe(gulp.dest("dist"))
     .pipe(terser())
     .pipe(rename("guacamole-common.min.js"))
     .pipe(gulp.dest("dist"))
