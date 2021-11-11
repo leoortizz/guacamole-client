@@ -1,6 +1,6 @@
 {
   "name": "guacamole-common-js-mirror-tmp",
-  "version": "1.3.0-b",
+  "version": "1.3.0-c",
   "description": "This package represents a mirror of the official Apache Guacamole repository, containing only the files of guacamole-common-js",
   "main": "dist/guacamole-common.js",
   "scripts": {
