@@ -1,20 +1,15 @@
-import gulp from "gulp"
-import concat from "gulp-concat"
-import insert from "gulp-insert"
-
-// TODO: minify
-// TODO: fix typescript support
+const gulp = require("gulp")
+const concat = require("gulp-concat")
+const insert = require("gulp-insert")
+const terser = require("gulp-terser")
+const rename = require("gulp-rename")
 
 gulp.task("default", function () {
-  return concatAndExportGuacamoleCommonJs()
-})
-
-function concatAndExportGuacamoleCommonJs() {
   return gulp
     .src("./src/main/webapp/modules/*.js")
-    .pipe(concat("guacamole-common.ts"))
-    .pipe(insert.prepend("// @ts-nocheck\n"))
-    .pipe(insert.append("\ndeclare module 'guacamole-common-js-mirror';\n"))
+    .pipe(concat("guacamole-common.js"))
     .pipe(insert.append("\nmodule.exports = Guacamole;"))
+    .pipe(terser())
+    .pipe(rename("guacamole-common.min.js"))
     .pipe(gulp.dest("dist"))
-}
+})
