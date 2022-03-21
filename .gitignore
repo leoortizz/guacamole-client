@@ -1,3 +1,10 @@
-target/
-*~
 node_modules
+dist
+
+doc
+extensions
+guacamole
+guacamole-common
+guacamole-common-js
+guacamole-docker
+guacamole-ext
