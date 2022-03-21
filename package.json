@@ -1,6 +1,6 @@
 {
   "name": "guacamole-common-js-fork",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "This is a fork of Apache's guacamole-common-js to be used as a NPM package.",
   "main": "dist/guacamole-common.js",
   "scripts": {
